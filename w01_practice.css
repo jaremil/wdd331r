@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+:root {
+    --headline-font: "Lora", Arial, sans-serif;
+    --body-font: Helvetica, Arial, sans-serif;
+    --body-color: #333;
+    --line-color: #d0d0d0;
+    --nav-color: #666;
+    --nav-active: #DEB887;
+    --nav-hover: #00ddff;
+}
+
+/* ALL */
+* {
+    Box-sizing: border-box;
+}
+
+img {
+    max-width: 260px;
+}
+
+html {
+    height: 100%;
+    font-size: 1.2em;
+}
+
+header {
+    font-family: var(--headline-font);
+}
+
+body {
+    height: 100%;
+    font-family: var(--body-font);
+    color: var(--body-color);
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 500%;
+}
+
+nav {
+    font-family: var(--headline-font);
+    font-size: 30px;
+    text-transform: uppercase;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: var(--line-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 a {
+    color: black;
+}
+
+h1 a:active {
+    color: black;
+}
+
+h1 a:hover {
+    color: black;
+}
+
+a {
+    color: var(--nav-color);
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--nav-active);
+}
+
+a:hover {
+    color: var(--nav-hover);
+}
+
+/* SMALLER */
+@media (max-width: 800px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    article {
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        padding: 5px;
+        gap: 5%;
+        margin-top: -10px;
+      }
+
+    .post-date {
+        text-align: right;
+        padding-right: 10%;
+        border-top: solid;
+        border-bottom: solid;
+        border-color: var(--line-color);
+    }
+
+    .post-date:nth-child(1){
+        padding-top: 20px;
+        padding-right: 10%;
+        border-bottom: solid;
+        border-color: var(--line-color);
+    }
+}
+
+/* LARGER */
+@media (min-width: 800px) {  
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        width: 99%;
+    }
+    
+    nav ul li a {
+        margin: 30px;
+    }
+
+    article:nth-child(1){
+        margin-top: 20px;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        padding: 5px;
+        gap: 5%;
+        margin-top: -10px;
+      }
+
+    .post-date {
+        text-align: right;
+    }
+
+    .post-content {
+        border-left: solid;
+        border-bottom: solid;
+        border-color: var(--line-color);
+        padding-left: 25px;
+    }
+}
