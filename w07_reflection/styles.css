@@ -7,16 +7,14 @@ html {
     color: black;
     border-radius: 15px;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .row-grid {
     display: flex;
     flex-flow: row wrap;
-    align-self: stretch;
     flex-wrap: wrap;
     gap: 15px;
-    border: solid;
-    color: black;
 }
 
 .row-grid img {
@@ -27,15 +25,14 @@ html {
 
 .col-grid {
     display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-
-
+    flex-flow: row wrap;
     flex-wrap: wrap;
-    align-content: stretch;
+    gap: 15px;
 }
 
 .col-grid img {
     width: 100%;
+    max-height: 75%;
     border-radius: 15px 15px 0px 0px;
+    margin-bottom: 15px;
 }
