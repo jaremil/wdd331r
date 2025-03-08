@@ -1,83 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="styles.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all';"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Module: Applying typographic principles.</title>
   </head>
-  <body>
-    <p>
+  <body class="m-20">
+    <p class="mb-5">
       For example, say your developers have come up with the perfect
       amortization program and you want to install it on the workgroup server
       for other systems to remotely mount and use. Because this is a third-party
-      or custom application, the logical place for it is in /usr/local/appname,
-      possibly with a link to the program binary in the /usr/local/bin directory
-      (because that's in the path).
+      or custom application, the logical place for it is in /<span
+        class="monospace_text"
+        >usr/local/appname</span
+      >, possibly with a link to the program binary in the
+      <span class="monospace_text">/usr/local/bin</span> directory (because
+      that's in the path).
     </p>
 
-    <h3>
-      Alert
-    </h3>
+    <div class="alert">
+      <span class="alert_text">ALERT</span>
 
-    <span>
-      If given a choice between putting the software package bigprog in the /usr/local/bigprog section and the /opt/bigprog section, it's hard to choose. Read any relevant exam question closely--the main difference being that the /opt section is not considered to be sharable, whereas the /usr section is often shared and mounted by client systems
-    </span>
+      <span class="alert_p">
+        If given a choice between putting the software package <b>BIGPROG</b> in
+        the <b>/usr/local/BIGPROG</b> section and the
+        <b>/opt/BIGPROG</b> section, it's hard to choose. Read any relevant exam
+        question closely--the main difference being that the <b>/opt</b> section
+        is not considered to be sharable, whereas the <b>/usr</b> section is
+        often shared and mounted by client systems
+      </span>
+    </div>
 
-    <h1>
-      File Management Commands
-    </h1>
-    <p>
+    <h1 class="title_text my-5">File Management Commands</h1>
+
+    <p class="mb-5">
       A major section of the 101 exam is dedicated to how to run commands
       properly with the right options and arguments. As a good sysadmin, you'll
       be expected to know how to create, delete, edit, set permissions on,
       display, move, copy, and determine the type of files and programs.
     </p>
 
-    <h3>
-      Alert
-    </h3>
+    <div class="alert_a">
+      <span class="alert_text col-span-1">ALERT</span>
 
-    <span>
-      You must be able to pick proper and working commands out of lists of possibilities, type in appropriate strings in fill-in-the-blank boxes, and in general show that you've run the programs and utilities in
-      question.
-    </span>
+      <span class="alert_b col-span-2">
+        You must be able to pick proper and working commands out of lists of
+        possibilities, type in appropriate strings in fill-in-the-blank boxes,
+        and in general show that you've run the programs and utilities in
+        question.
+      </span>
+    </div>
 
-    <h1>
-      Tips for working with Linux files
-    </h1>
+    <h2 class="p_title_text my-5">Tips for Working with Linux Files</h2>
 
-    <p>
+    <p class="mb-5">
       Because most users and sysadmins come from a Windows or other OS
       background, a quick set of recommendations for the less-experienced can be
       of help here:
     </p>
 
-    <h2>
-      > Hidden files aren't really hidden -
-    </h2>
+    <p class="mb-5">
+      <b>> Hidden files aren't really hidden -</b> They just begin with a
+      <span class="monospace_text">.</span>, such as the
+      <span class="monospace_text">.bashrc</span> and
+      <span class="monospace_text">.bash_profile</span> files. These are not
+      viewable by normal users with conventional commands and switches and
+      aren't deleted by commands such as
+      <span class="monospace_text">rm -f *.*.</span>
+    </p>
 
-    <span>
-      They just begin with a ., such as the .bashrc and .bash_profile files. These are not viewable by normal users with conventional commands and
-      switches and aren't deleted by commands such as rm -f *.*.
-    </span>
+    <p class="mb-5">
+      <b>> Filenames can contain multiple periods or no period characters -</b>
+      The filenames <span class="monospace_text">this.is.a.long.file</span> and
+      <span class="monospace_text">thisisalongfile</span> are perfectly
+      reasonable and possible.
+    </p>
 
-    <h2>
-      > Filenames can contain multiple periods or no period characters -
-    </h2>
-
-    <span>
-      The filenames this.is.a.long.file and thisisalongfile are perfectly reasonable and possible.
-    </span>
-
-    <h2>
-      > Spaces in filenames look nice, but are a pain to type -
-    </h2>
-
-    <span>
-      Use an _ or a - instead of spaces because it's neater and easier than
-      prefixing all spaces with a \. (To display a space in a filename, the
-      system shows a space prefixes with a backslash.)
-    </span>
+    <p class="mb-5">
+      <b>> Spaces in filenames look nice, but are a pain to type -</b> Use an
+      <span class="monospace_text">_</span> or a
+      <span class="monospace_text">-</span> instead of spaces because it's
+      neater and easier than prefixing all spaces with a
+      <span class="monospace_text">\</span>. (To display a space in a filename,
+      the system shows a space prefixes with a backslash.)
+    </p>
   </body>
 </html>
